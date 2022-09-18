@@ -15,8 +15,9 @@ router1=routers.DefaultRouter()
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('', include(router.urls)),
-    # path('types/', include(router1.urls), name='type_url'),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-
     path('admin/', admin.site.urls),
+    path('types/', shop_views.RangeViewSet.as_view({'get': 'list'})),
+    path('types/<int:idrange>/', shop_views.ModelsViewSet.as_view({'get':'get_models'})),
+    path('types/<int:idrange>/', shop_views.ModelsViewSet.as_view({'post':'add_models'})),
 ]
