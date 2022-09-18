@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
+
 class Range(models.Model):
     rangeid = models.AutoField(verbose_name='rangeId', primary_key=True)
     rangename = models.CharField(verbose_name='rangeName', unique=True, max_length=30)

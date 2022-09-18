@@ -19,6 +19,7 @@ class ModelsViewSet(viewsets.ModelViewSet):
         print(res.values_list())
         return Response(res.values())
 
+
     @action(detail=True, methods=['post'])
     def add_models(self, request, *args, **kwargs):
         idrange=int(kwargs['idrange'])

@@ -21,3 +21,4 @@ urlpatterns = [
     path('types/<int:idrange>/', shop_views.ModelsViewSet.as_view({'get':'get_models'})),
     path('types/<int:idrange>/', shop_views.ModelsViewSet.as_view({'post':'add_models'})),
 ]
+

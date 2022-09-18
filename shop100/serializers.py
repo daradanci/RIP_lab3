@@ -9,6 +9,7 @@ class RangeSerializer(serializers.ModelSerializer):
         fields = ["rangeid", "rangename"]
 
 
+
 class ModelsSerializer(serializers.ModelSerializer):
     class Meta:
         model=Models
