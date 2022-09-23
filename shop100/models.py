@@ -26,10 +26,10 @@ class Stock(models.Model):
     idmodel = models.ForeignKey(Models, models.DO_NOTHING, verbose_name='idModel', default=0)
     size = models.CharField(max_length=4, choices=ItemSize.choices, default=ItemSize.MEDIUM)
     amount = models.IntegerField(blank=True, null=True, default=0)
-
-
     class Meta:
         unique_together = (('idmodel', 'size'),)
+
+
 
 
 
